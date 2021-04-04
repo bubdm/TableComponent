@@ -1,0 +1,16 @@
+﻿@page "/"
+@inject IJSRuntime JS
+<Table T="EmployeesDummyClass" ListModel="ListModel" OnCanUpdateAsync="UpdateList"/>
+
+@code{  
+    List<EmployeesDummyClass> ListModel;
+    protected override async Task OnParametersSetAsync()
+    {
+        ListModel = await DummyDataAccess.GetAllEmployeesAsync();
+    }
+
+    private void UpdateList(EmployeesDummyClass users)
+    {
+        JS.InvokeVoidAsync("console.log", users.DateOfBirth);
+    }
+}
