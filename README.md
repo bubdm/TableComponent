@@ -1,5 +1,6 @@
 # TableComponent
-Simple Blazor component that enables you to, by only passing a ``List<T>``, show a table and update the records by double clicking it.
+Simple Blazor component that enables you to, by only passing a ``List<T>``, show a table and update the records by double clicking it.<br>
+![preview gif](https://github.com/LeoUpperThrower4/TableComponent/blob/main/Media/DbClickableTableComp.gif)
 ## Usage
  ` <Table T="Class" ListModel="List Instance" OnCanUpdateAsync="Delegate"/> ` <br />
 `T`: The class type <br>
